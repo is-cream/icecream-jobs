@@ -1,7 +1,8 @@
 # Icecream Jobs
 
-A job-application tracker: dashboard with match ratings, a calendar view of
-applications by day, and a questionnaire tab for application questions.
+A job-application tracker **plus the autonomous application engine**: dashboard with match ratings, a calendar view of
+applications by day, a questionnaire tab — and a `job-application` skill that teaches the user's Muse agent to find
+roles, tailor cover letters, fill applications, and submit them.
 
 ## What's in here
 
@@ -10,6 +11,10 @@ applications by day, and a questionnaire tab for application questions.
   seed data (`seed-data.ts`), resume text (`resume-data.ts`)
 - `drizzle/` — SQL migrations
 - `space.json` — artifact manifest
+- `skills/job-application/` — the autonomous-apply skill: discovery workflow,
+  applicant profile template, search config template, cover-letter guide, and
+  the portal-questionnaire helper script
+- `skills/icecream-jobs-install/` — install skill for the recipient's Muse
 
 ## Make it yours
 
@@ -20,13 +25,17 @@ applications by day, and a questionnaire tab for application questions.
    and add applications through the app's UI).
 3. **Example questions**: the starter questions in `server/src/actions.ts`
    (`SEED_QUESTIONS`) are placeholders — edit or delete them.
+4. **Applicant profile**: fill in `skills/job-application/applicant-profile.json`
+   — every `UNKNOWN` field must be answered by you, never invented by the agent.
+5. **Search config**: fill in `skills/job-application/job-search-config.json` —
+   your TC floor, target companies/levels/locations, and standing form answers.
 
 ## Build it in Muse
 
 Hand this folder to your Muse assistant and ask it to build it as a
-TypeScript-space web artifact. The assistant will handle the build, audit,
-and publish steps. No manual installation needed — the app (frontend,
-backend, and database) runs inside Muse.
+TypeScript-space web artifact (the `icecream-jobs-install` skill walks through
+the steps). Then install the `job-application` skill so the agent can apply to
+jobs autonomously. No manual installation needed.
 
 ## Notes
 
