@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 52px;
+  --text-6xl: 60px;
+  --text-6xl--line-height: 60px;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #faf7f1;
+  --surface: #fffdf8;
+  --surface-alt: #f3eee1;
+  --text: #1e2b26;
+  --dim: #68736b;
+  --border: #e0d8c4;
+  --accent: #14342b;
+  --accent-text: #faf7f1;
+  --highlight: #e86a2c;
+  --great: #1e7a4f;
+  --ok: #b07d1e;
+  --weak: #a34a38;
+  --radius: 10px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-alt);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101613;
+    --surface: #1a211d;
+    --surface-alt: #232b26;
+    --text: #edeade;
+    --dim: #9aa39b;
+    --border: #333d36;
+    --accent: #a8c9b8;
+    --accent-text: #101613;
+    --highlight: #f08a4b;
+    --great: #4cb782;
+    --ok: #d9a94f;
+    --weak: #d98a76;
+  }
+}
+
+.font-display {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
