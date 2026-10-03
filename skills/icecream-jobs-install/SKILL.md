@@ -28,6 +28,11 @@ customize it for the user, then build through the artifact builder.
      letterNote, notes.
    - Optionally, starter questionnaire entries → edit `SEED_QUESTIONS` in
      `server/src/actions.ts`.
+   - Their applicant profile → fill every `UNKNOWN` in
+     `skills/job-application/applicant-profile.json` by asking the user.
+     Never invent values.
+   - Their search config → `skills/job-application/job-search-config.json`:
+     TC floor, target companies/levels/locations, standing form answers.
 
 3. **PII check before building.** Grep the customized source for the user's
    name, email, phone, and address appearing anywhere they shouldn't (e.g.
@@ -42,6 +47,11 @@ customize it for the user, then build through the artifact builder.
 5. **Verify.** After building, open the artifact and confirm: the dashboard
    loads, the calendar renders, the questionnaire tab lists the seed
    questions, and the resume viewer shows the user's resume.
+
+6. **Install the job-application skill.** Copy `skills/job-application/` into
+   the user's workspace skills directory so their agent can discover roles,
+   tailor cover letters, and submit applications autonomously. The skill's
+   `SKILL.md` carries the full workflow.
 
 ## Output Contract
 
